@@ -1,10 +1,13 @@
 package com.desafio.Cep_Santander.dto;
 
-public class CepResponseDTO {
-    public String cep;
-    public String logradouro;
-    public String bairro;
-    public String localidade;
-    public String uf;
+import lombok.Data;
 
+@Data
+public class CepResponseDTO {
+
+    private String cep;
+    private String logradouro;
+    private String bairro;
+    private String localidade;
+    private String uf;
 }

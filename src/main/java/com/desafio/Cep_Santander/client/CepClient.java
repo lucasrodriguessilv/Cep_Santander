@@ -8,6 +8,10 @@ import org.springframework.web.client.RestTemplate;
 public class CepClient {
     private final RestTemplate restTemplate = new RestTemplate();
     public CepResponseDTO buscarCep(String cep){
+
+        //alterar teste com weremock String url = "http://localhost:8089/cep/" + cep;
+
+        //String url = "http://localhost:8089/cep/" + cep;
         String url = "https://viacep.com.br/ws/" + cep + "/json/";
         return restTemplate.getForObject(url, CepResponseDTO.class);
     }
